@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/public
+/blogdown
+
+# OS files
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db

@@ -1,0 +1,62 @@
+---
+title: Setting up a Personal Blog with Blogdown, Academic, and Netlify
+author: Stephan Kadauke
+date: '2019-10-28'
+slug: setting-up-a-personal-blog-with-blogdown-academic-and-netlify
+categories: []
+tags: []
+subtitle: 'First post!'
+summary: 'This blog post describes (for my future self) how I set up this blog.'
+authors: []
+lastmod: '2019-10-28T19:57:56-04:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<p>What could be more <strong>meta</strong> than writing my first blog post about setting up my blog?</p>
+<div id="set-up-blogdown" class="section level2">
+<h2>Set up Blogdown</h2>
+<p>The first step was to create the site as described in <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>.</p>
+<p>To install the latest version of blogdown, I ran the following:</p>
+<pre class="r"><code>install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;rstudio/blogdown&quot;)
+blogdown::install_hugo()</code></pre>
+<p>I decided on the <a href="https://github.com/gcushen/hugo-academic">Academic</a> theme, created a new project named <code>cellsgenesanddata</code>, and started writing this post using the <code>New Post</code> add-in.</p>
+</div>
+<div id="continuous-deployment" class="section level2">
+<h2>Continuous Deployment</h2>
+<p>Continuous deployment using <a href="https://www.netlify.com">Netlify</a> and <a href="https://www.github.com">GitHub</a> is an awesome workflow since it enforces version control, and whenever I push a change to my GitHub account, Netlify will automatically update and publish my website.</p>
+<p>Here are the steps I followed:</p>
+<ol style="list-style-type: decimal">
+<li>On GitHub, create a new public repository named <code>cellsgenesanddata</code>.</li>
+<li>Tell RStudio that I want this project under version control with <code>git</code>: <strong>Tools</strong> → <strong>Project Options</strong> → <strong>Git/SVN</strong> → <strong>Git</strong>.</li>
+<li></li>
+</ol>
+<ul>
+<li>On Netlify, create a new site from Git: <strong>New site from Git</strong> → <strong>GitHub</strong> → <strong>Only select repositories</strong> → <code>skadauke/cellsgenesanddata</code> →</li>
+</ul>
+</div>
+<div id="configuration" class="section level2">
+<h2>Configuration</h2>
+<p>There are a couple of files I didn’t want to add to the repository. The <code>public/</code> folder holds the rendered page, which is not necessary since Netlify renders its own version. The <code>blogdown/</code> folder contains cache files that do not need to be subject to version control. Also, it is poor form to share your operating system’s cache files.</p>
+<p>Here are the contents of my <code>.gitignore</code> file:</p>
+<pre><code>.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/public
+/blogdown
+
+# OS files
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db</code></pre>
+</div>

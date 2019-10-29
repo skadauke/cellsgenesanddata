@@ -1,0 +1,71 @@
+---
+title: Setting up a Personal Blog with Blogdown, Academic, and Netlify
+author: Stephan Kadauke
+date: '2019-10-28'
+slug: setting-up-a-personal-blog-with-blogdown-academic-and-netlify
+categories: []
+tags: []
+subtitle: 'First post!'
+summary: 'This blog post describes (for my future self) how I set up this blog.'
+authors: []
+lastmod: '2019-10-28T19:57:56-04:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+What could be more **meta** than writing my first blog post about setting up my blog?
+
+## Set up Blogdown
+
+The first step was to create the site as described in [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/). 
+
+To install the latest version of blogdown, I ran the following:
+
+```{r eval=FALSE}
+install.packages("devtools")
+devtools::install_github("rstudio/blogdown")
+blogdown::install_hugo()
+```
+
+I decided on the [Academic](https://github.com/gcushen/hugo-academic) theme, created a new project named `cellsgenesanddata`, and started writing this post using the `New Post` add-in.
+
+## Continuous Deployment
+
+Continuous deployment using [Netlify](https://www.netlify.com) and [GitHub](https://www.github.com) is an awesome workflow since it enforces version control, and whenever I push a change to my GitHub account, Netlify will automatically update and publish my website.
+
+Here are the steps I followed:
+
+1. On GitHub, create a new public repository named `cellsgenesanddata`. 
+2. Tell RStudio that I want this project under version control with `git`: **Tools** → **Project Options** → **Git/SVN** → **Git**.
+3.  
+- On Netlify, create a new site from Git: **New site from Git** → **GitHub** → **Only select repositories** → `skadauke/cellsgenesanddata` → 
+
+
+
+
+## Configuration
+
+There are a couple of files I didn't want to add to the repository. The `public/` folder holds the rendered page, which is not necessary since Netlify renders its own version. The `blogdown/` folder contains cache files that do not need to be subject to version control. Also, it is poor form to share your operating system’s cache files.
+
+Here are the contents of my `.gitignore` file:
+
+```{}
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+/public
+/blogdown
+
+# OS files
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db
+```
+
