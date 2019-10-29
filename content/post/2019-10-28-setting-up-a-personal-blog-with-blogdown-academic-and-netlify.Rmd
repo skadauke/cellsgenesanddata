@@ -91,7 +91,7 @@ The `content/home` folder contains **widgets** that are to be displayed on the h
 The `config/_default/params.toml` file controls the behavior of the Academic theme. I edited the **Contact Details** section to read:
 
 ```{toml}
-email = ""
+email = "skadauke@gmail.com"
 phone = ""
 
 contact_links = [
