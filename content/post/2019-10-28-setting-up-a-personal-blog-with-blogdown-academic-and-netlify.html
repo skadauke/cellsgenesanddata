@@ -48,13 +48,14 @@ git push -u origin master</code></pre>
 </div>
 <div id="configuration" class="section level2">
 <h2>Configuration</h2>
-<p>There are a couple of files I don’t want to add to the repository. The <code>public/</code> folder holds the rendered page, which is not necessary since Netlify renders its own version. Also, it is poor form to share your operating system’s cache files.</p>
+<p>There are a couple of files I don’t want to add to the repository. The <code>public/</code> folder holds the rendered page, which is not necessary since Netlify renders its own version. The <code>blogdown/</code> directory is used to store cache files, and they are most likely to be useless to the published website. Also, it is poor form to share your operating system’s cache files.</p>
 <p>Here are the contents of my <code>.gitignore</code> file:</p>
 <pre><code>.Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 
+/blogdown
 /public
 
 # OS files
@@ -62,6 +63,12 @@ git push -u origin master</code></pre>
 .Spotlight-V100
 .Trashes
 Thumbs.db</code></pre>
+<div id="blogdown" class="section level3">
+<h3>Blogdown</h3>
+<p>Set the default user and document type in <code>~/.Rprofile</code>:</p>
+<pre class="r"><code>options(blogdown.ext = &quot;.Rmd&quot;,
+        blogdown.author = &quot;Stephan Kadauke&quot;)</code></pre>
+</div>
 <div id="netlify" class="section level3">
 <h3>Netlify</h3>
 <p>I changed the site name to <a href="https://cellsgenesanddata.netlify.com" class="uri">https://cellsgenesanddata.netlify.com</a>.</p>
@@ -81,7 +88,7 @@ baseurl = &quot;https://cellsgenesanddata.netlify.com/&quot;</code></pre>
 <li><code>contact.md</code></li>
 </ul>
 <p>The <code>config/_default/params.toml</code> file controls the behavior of the Academic theme. I edited the <strong>Contact Details</strong> section to read:</p>
-<pre class="toml"><code>email = &quot;skadauke@gmail.com&quot;
+<pre class="toml"><code>email = &quot;&lt;my email&gt;&quot;
 phone = &quot;&quot;
 
 contact_links = [
