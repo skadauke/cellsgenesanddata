@@ -6,7 +6,7 @@ slug: setting-up-a-personal-blog-with-blogdown-academic-and-netlify
 categories: []
 tags: []
 subtitle: 'First post!'
-summary: 'This blog post describes (for my future self) how I set up this blog.'
+summary: 'This blog post describes (mainly for my future self) how I set up this blog.'
 authors: []
 lastmod: '2019-10-28T19:57:56-04:00'
 featured: no
@@ -41,15 +41,21 @@ Here are the steps I followed:
 
 1. On GitHub, create a new public repository named `cellsgenesanddata`. 
 2. Tell RStudio that I want this project under version control with `git`: **Tools** → **Project Options** → **Git/SVN** → **Git**.
-3.  
-- On Netlify, create a new site from Git: **New site from Git** → **GitHub** → **Only select repositories** → `skadauke/cellsgenesanddata` → 
+3. Commit all files and add the remote repository:
 
+```{bash, eval = FALSE}
+git add -A
+git commit -m "First commit"
+git remote add origin https://github.com/skadauke/cellsgenesanddata
+git push -u origin master
+```
 
+4. On Netlify, create a new site from Git. Note that the default Hugo version Netlify will use is too old, so we need to add an environment variable. **New site from Git** → **GitHub** → **Only select repositories** → `skadauke/cellsgenesanddata` → **Advanced Settings** → **New variable ** → `HUGO_VERSION` = `0.59.0` → **Deploy site**.
 
 
 ## Configuration
 
-There are a couple of files I didn't want to add to the repository. The `public/` folder holds the rendered page, which is not necessary since Netlify renders its own version. The `blogdown/` folder contains cache files that do not need to be subject to version control. Also, it is poor form to share your operating system’s cache files.
+There are a couple of files I don't want to add to the repository. The `public/` folder holds the rendered page, which is not necessary since Netlify renders its own version. Also, it is poor form to share your operating system’s cache files.
 
 Here are the contents of my `.gitignore` file:
 
@@ -60,7 +66,6 @@ Here are the contents of my `.gitignore` file:
 .Ruserdata
 
 /public
-/blogdown
 
 # OS files
 .DS_Store
@@ -68,4 +73,33 @@ Here are the contents of my `.gitignore` file:
 .Trashes
 Thumbs.db
 ```
+
+### Academic
+
+Source: <https://sourcethemes.com/academic/docs/get-started/>
+
+In the `config.toml` file, I only changed the `title` key.
+
+The `content/home` folder contains **widgets** that are to be displayed on the homepage. We will want the following widgets to be active and inactive all others by setting `active = false` in the `.md` file. It's possible to position the widgets by modifying the `weight` parameter:
+
+- `about.md`
+- `posts.md`
+- `projects.md`
+- `talks.md`
+- `contact.md`
+
+The `config/_default/params.toml` file controls the behavior of the Academic theme. I edited the **Contact Details** section to read:
+
+```{toml}
+email = ""
+phone = ""
+
+contact_links = [
+  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/StephanKadauke"},
+  ]
+
+```
+
+
+
 
