@@ -1,48 +1,45 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: My interests include reproducible research, clinical data science, and cell therapy.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: Clinical Pathology Residency
+    institution: Massachusetts General Hospital
+    year: 2018
+  - course: Transfusion Medicine Fellowship
+    institution: Harvard Medical School
+    year: 2017
+  - course: MD, PhD in Cell and Molecular Biology
+    institution: University of Pennsylvania
+    year: 2014
 email: ""
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
-name: Nelson Bighetti
+- Reproducible research
+- Clinical data science
+- Cell therapy
+name: Stephan Kadauke
 organizations:
-- name: Stanford University
+- name: University of Pennsylvania
   url: ""
-role: Professor of Artificial Intelligence
+role: Assistant Professor of Pathology and Laboratory Medicine
 social:
 - icon: envelope
   icon_pack: fas
   link: '#contact'
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: https://twitter.com/StephanKadauke
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.com/citations?hl=en&user=fNmXZrwAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/skadauke
 superuser: true
 user_groups:
 - Researchers
 - Visitors
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+Stephan Kadauke works at the Children's Hospital of Philadelphia where he is the Assistant Director of the Cell and Gene Therapy Lab and attends on the Apheresis service. He is also a faculty member of the Department of Biomedical Health Informatics and the Division of Pathology Informatics. 

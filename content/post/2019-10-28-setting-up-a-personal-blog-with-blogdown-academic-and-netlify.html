@@ -62,10 +62,16 @@ git push -u origin master</code></pre>
 .Spotlight-V100
 .Trashes
 Thumbs.db</code></pre>
+<div id="netlify" class="section level3">
+<h3>Netlify</h3>
+<p>I changed the site name to <a href="https://cellsgenesanddata.netlify.com" class="uri">https://cellsgenesanddata.netlify.com</a>.</p>
+</div>
 <div id="academic" class="section level3">
 <h3>Academic</h3>
 <p>Source: <a href="https://sourcethemes.com/academic/docs/get-started/" class="uri">https://sourcethemes.com/academic/docs/get-started/</a></p>
-<p>In the <code>config.toml</code> file, I only changed the <code>title</code> key.</p>
+<p>In the <code>config.toml</code> file, I changed the following:</p>
+<pre class="toml"><code>title = &quot;Cells, Genes, and Data&quot;
+baseurl = &quot;https://cellsgenesanddata.netlify.com/&quot;</code></pre>
 <p>The <code>content/home</code> folder contains <strong>widgets</strong> that are to be displayed on the homepage. We will want the following widgets to be active and inactive all others by setting <code>active = false</code> in the <code>.md</code> file. It’s possible to position the widgets by modifying the <code>weight</code> parameter:</p>
 <ul>
 <li><code>about.md</code></li>
@@ -80,7 +86,9 @@ phone = &quot;&quot;
 
 contact_links = [
   {icon = &quot;twitter&quot;, icon_pack = &quot;fab&quot;, name = &quot;DM Me&quot;, link = &quot;https://twitter.com/StephanKadauke&quot;},
-  ]
-</code></pre>
+  ]</code></pre>
+<p>The <code>about.md</code> widget gets its content from <code>content/authors/admin/_index.md</code>. I edited this file extensively. I also added a square cropped photo under the name <code>content/authors/admin/avatar.png</code>.</p>
+<p>The contents of the navigation menu can be modified in the <code>config/_default/menu.toml</code> file. I edited this to show the elements on the home page and added a downloadable PDF of my CV.</p>
+<p>Finally, I deleted unused example pages.</p>
 </div>
 </div>

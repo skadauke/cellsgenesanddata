@@ -74,11 +74,20 @@ Here are the contents of my `.gitignore` file:
 Thumbs.db
 ```
 
+### Netlify
+
+I changed the site name to <https://cellsgenesanddata.netlify.com>.
+
 ### Academic
 
 Source: <https://sourcethemes.com/academic/docs/get-started/>
 
-In the `config.toml` file, I only changed the `title` key.
+In the `config.toml` file, I changed the following: 
+
+```{toml}
+title = "Cells, Genes, and Data"
+baseurl = "https://cellsgenesanddata.netlify.com/"
+```
 
 The `content/home` folder contains **widgets** that are to be displayed on the homepage. We will want the following widgets to be active and inactive all others by setting `active = false` in the `.md` file. It's possible to position the widgets by modifying the `weight` parameter:
 
@@ -97,9 +106,11 @@ phone = ""
 contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/StephanKadauke"},
   ]
-
 ```
 
+The `about.md` widget gets its content from `content/authors/admin/_index.md`. I edited this file extensively. I also added a square cropped photo under the name `content/authors/admin/avatar.png`. 
 
+The contents of the navigation menu can be modified in the `config/_default/menu.toml` file. I edited this to show the elements on the home page and added a downloadable PDF of my CV. 
 
+Finally, I deleted unused example pages.
 
