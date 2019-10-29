@@ -25,7 +25,7 @@ The first step was to create the site as described in [blogdown: Creating Websit
 
 To install the latest version of blogdown, I ran the following:
 
-```{r eval=FALSE}
+```{r, eval=FALSE}
 install.packages("devtools")
 devtools::install_github("rstudio/blogdown")
 blogdown::install_hugo()
@@ -94,7 +94,7 @@ Source: <https://sourcethemes.com/academic/docs/get-started/>
 
 In the `config.toml` file, I changed the following: 
 
-```{toml}
+```{}
 title = "Cells, Genes, and Data"
 baseurl = "https://cellsgenesanddata.netlify.com/"
 ```
@@ -109,7 +109,7 @@ The `content/home` folder contains **widgets** that are to be displayed on the h
 
 The `config/_default/params.toml` file controls the behavior of the Academic theme. I edited the **Contact Details** section to read:
 
-```{toml}
+```{}
 email = "<my email>"
 phone = ""
 
@@ -123,4 +123,6 @@ The `about.md` widget gets its content from `content/authors/admin/_index.md`. I
 The contents of the navigation menu can be modified in the `config/_default/menu.toml` file. I edited this to show the elements on the home page and added a downloadable PDF of my CV. 
 
 Finally, I deleted unused example pages.
+
+That's it for now! In the future, I will populate the **Projects** and **Talks** sections.
 

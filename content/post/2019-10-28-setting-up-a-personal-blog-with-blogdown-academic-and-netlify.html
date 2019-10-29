@@ -77,7 +77,7 @@ Thumbs.db</code></pre>
 <h3>Academic</h3>
 <p>Source: <a href="https://sourcethemes.com/academic/docs/get-started/" class="uri">https://sourcethemes.com/academic/docs/get-started/</a></p>
 <p>In the <code>config.toml</code> file, I changed the following:</p>
-<pre class="toml"><code>title = &quot;Cells, Genes, and Data&quot;
+<pre><code>title = &quot;Cells, Genes, and Data&quot;
 baseurl = &quot;https://cellsgenesanddata.netlify.com/&quot;</code></pre>
 <p>The <code>content/home</code> folder contains <strong>widgets</strong> that are to be displayed on the homepage. We will want the following widgets to be active and inactive all others by setting <code>active = false</code> in the <code>.md</code> file. It’s possible to position the widgets by modifying the <code>weight</code> parameter:</p>
 <ul>
@@ -88,7 +88,7 @@ baseurl = &quot;https://cellsgenesanddata.netlify.com/&quot;</code></pre>
 <li><code>contact.md</code></li>
 </ul>
 <p>The <code>config/_default/params.toml</code> file controls the behavior of the Academic theme. I edited the <strong>Contact Details</strong> section to read:</p>
-<pre class="toml"><code>email = &quot;&lt;my email&gt;&quot;
+<pre><code>email = &quot;&lt;my email&gt;&quot;
 phone = &quot;&quot;
 
 contact_links = [
@@ -97,5 +97,6 @@ contact_links = [
 <p>The <code>about.md</code> widget gets its content from <code>content/authors/admin/_index.md</code>. I edited this file extensively. I also added a square cropped photo under the name <code>content/authors/admin/avatar.png</code>.</p>
 <p>The contents of the navigation menu can be modified in the <code>config/_default/menu.toml</code> file. I edited this to show the elements on the home page and added a downloadable PDF of my CV.</p>
 <p>Finally, I deleted unused example pages.</p>
+<p>That’s it for now! In the future, I will populate the <strong>Projects</strong> and <strong>Talks</strong> sections.</p>
 </div>
 </div>
